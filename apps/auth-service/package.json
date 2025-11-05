@@ -85,7 +85,10 @@
         ],
         "options": {
           "buildTarget": "@swipecart/auth-service:build",
-          "runBuildTargetDependencies": false
+          "runBuildTargetDependencies": false,
+          "port": 6002,
+          "inspect": false
+          
         },
         "configurations": {
           "development": {
