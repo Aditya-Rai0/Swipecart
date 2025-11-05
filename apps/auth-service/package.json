@@ -1,3 +1,4 @@
+
 {
   "name": "@swipecart/auth-service",
   "version": "0.0.1",
@@ -20,8 +21,17 @@
           "main": "apps/auth-service/src/main.ts",
           "tsConfig": "apps/auth-service/tsconfig.app.json",
           "assets": [
-            "apps/auth-service/src/assets"
-          ],
+          {
+            "glob": "**/*",
+            "input": "apps/auth-service/src/assets",
+            "output": "apps/auth-service/src/assets"
+          },
+          {
+            "glob": "swagger-output.json",
+            "input": "apps/auth-service/src",
+            "output": "apps/auth-service/src"
+          }
+        ],
           "esbuildOptions": {
             "sourcemap": true,
             "outExtension": {
@@ -116,5 +126,3 @@
     "express": "^4.21.2"
   }
 }
-
-
